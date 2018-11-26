@@ -69,7 +69,7 @@ Fetch API viduje naudodamas `Promise` mums suteikia galimybę pasiekti [`respons
 Savo projektui mes naudosime JSON API iš https://github.com/tastejs/hacker-news-pwas/blob/master/docs/api.md. Todėl mums reikės iš response pasiimti JSON. Būtinai reikia pasirūpinti nepavykusiais requestais.
 ```js
 fetch('https://api.hnpwa.com/v0/news/1.json')
-    .then(respone => response.json())
+    .then(response => response.json())
     .then(response => console.log(response))
     .catch(() => console.log('error'))
 ```
@@ -88,7 +88,7 @@ componentDidUpdate() {
 fetchItems() {
     this.setState({ isFetching: true });
     fetch('https://api.hnpwa.com/v0/news/1.json')
-        .then(respone => response.json())
+        .then(response => response.json())
         .then(items => this.setState({
             items,
             isFetching: false
